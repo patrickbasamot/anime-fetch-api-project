@@ -2,9 +2,11 @@
 //         .then(response => response.json())
 //         .then(quote => console.log(quote))
 const container = document.getElementById('container');
+const refresh = document.getElementById('refresh');
 const anime = document.createElement('h3');
 const character = document.createElement('h4');
 const quote = document.createElement('p');
+
 
 
 container.appendChild(quote);
@@ -29,3 +31,6 @@ function show(data){
         quote.textContent = data.quote;
 }
 
+refresh.addEventListener('click',function(){
+        window.location.reload();
+})
